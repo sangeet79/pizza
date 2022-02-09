@@ -144,7 +144,7 @@ minetest.register_node("pizza:pepperonipizza", {
 minetest.register_craft({
     output = "pizza:pepperonipizza",
 	recipe = {
-	    {"group:food_flour","groups:food_cheese",""},
+	    {"group:food_flour","group:food_cheese",""},
 		{"pizza:marinara","pizza:pepperoni",""},
 		{"","",""},
 	},
@@ -176,7 +176,7 @@ minetest.register_craft({
     output = "pizza:hawaiian",
 	recipe = {
 	    {"group:food_flour","farming:pineapple_ring",""},
-		{"mobs:meat","groups:food_cheese",""},
+		{"mobs:meat","group:food_cheese",""},
 		{"","",""},
 	},
 	replacements = {
@@ -247,7 +247,7 @@ minetest.register_craft({
     type = "shapeless",
     output = "pizza:pepperoni_slice 8",
 	recipe = {
-	    "pizza:pepperoni",
+	    "pizza:pepperonipizza",
 		"farming:cutting_board"
 	},
 	replacements = {
@@ -296,7 +296,7 @@ minetest.register_craft({
 -- Packing pizza slides
 
 minetest.register_craft({
-    type = "shapeless",
+	type = "shapeless",
     output = "pizza:margherita",
 	recipe = {
 	    "pizza:margherita_slice",
