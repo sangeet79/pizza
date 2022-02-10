@@ -1,3 +1,5 @@
+-- Thx to sangeet79 for revising and fixing the codes
+
 local modname = "pizza"
 local modpath = minetest.get_modpath(modname)
 local mg_name = minetest.get_mapgen_setting("mg_name")
@@ -103,8 +105,8 @@ minetest.register_node("pizza:margherita", {
 	selection_box = {
 		type = "wallmounted",
 	},
-	legacy_wallmounted = true,
-	use_texture_alpha = true,
+	legacy_wallmounted = false,
+	use_texture_alpha = false,
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
 	groups = {snappy = 3},
@@ -134,8 +136,8 @@ minetest.register_node("pizza:pepperonipizza", {
 	selection_box = {
 		type = "wallmounted",
 	},
-	legacy_wallmounted = true,
-	use_texture_alpha = true,
+	legacy_wallmounted = false,
+	use_texture_alpha = false,
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
 	groups = {snappy = 3},
@@ -165,8 +167,8 @@ minetest.register_node("pizza:hawaiian", {
 	selection_box = {
 		type = "wallmounted",
 	},
-	legacy_wallmounted = true,
-	use_texture_alpha = true,
+	legacy_wallmounted = false,
+	use_texture_alpha = false,
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
 	groups = {snappy = 3},
@@ -196,8 +198,8 @@ minetest.register_node("pizza:cheese_pizza", {
 	selection_box = {
 		type = "wallmounted",
 	},
-	legacy_wallmounted = true,
-	use_texture_alpha = true,
+	legacy_wallmounted = false,
+	use_texture_alpha = false,
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
 	groups = {snappy = 3},
