@@ -109,7 +109,6 @@ minetest.register_node("pizza:margherita", {
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
 	groups = {snappy = 3, food_pizza = 1},
-    on_use = minetest.item_eat(8),
 })
 
 minetest.register_craft({
@@ -142,7 +141,6 @@ minetest.register_node("pizza:pepperonipizza", {
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
 	groups = {snappy = 3, food_pizza = 1},
-    on_use = minetest.item_eat(8),
 })
 
 minetest.register_craft({
@@ -175,7 +173,6 @@ minetest.register_node("pizza:hawaiian", {
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
 	groups = {snappy = 3, food_pizza = 1},
-    on_use = minetest.item_eat(8),
 })
 
 minetest.register_craft({
@@ -196,7 +193,7 @@ minetest.register_node("pizza:cheese_pizza", {
 	inventory_image = "CheesePizza.png",
 	wield_image = "CheesePizza.png",
 	sunlight_propagates = true,
-	walkable = true,
+	walkable = false,
 	climbable = false,
 	is_ground_content = false,
 	selection_box = {
@@ -208,7 +205,6 @@ minetest.register_node("pizza:cheese_pizza", {
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
 	groups = {snappy = 3, food_pizza = 1},
-    on_use = minetest.item_eat(8),
 })
 
 minetest.register_craft({
