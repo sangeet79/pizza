@@ -222,7 +222,7 @@ minetest.register_craft({
 minetest.register_craftitem("pizza:margherita_slice", {
     description = S("Margharita Pizza Slice"),
 	inventory_image = "Marghariteslice.png",
-	on_use = minetest.item_eat(7),
+	on_use = minetest.item_eat(4),
 	groups = {pizza_slice = 1, flammable = 2},
 })
 
@@ -241,7 +241,7 @@ minetest.register_craft({
 minetest.register_craftitem("pizza:pepperoni_slice", {
     description = S("Pepperoni Pizza Slice"),
 	inventory_image = "Pepperonislice.png",
-	on_use = minetest.item_eat(7),
+	on_use = minetest.item_eat(4),
 	groups = {pizza_slice = 1, flammable = 2},
 })
 
@@ -260,7 +260,7 @@ minetest.register_craft({
 minetest.register_craftitem("pizza:hawaiian_slice", {
     description = S("Pineapple Pizza Slice"),
 	inventory_image = "Hawaiianslice.png",
-	on_use = minetest.item_eat(7),
+	on_use = minetest.item_eat(4),
 	groups = {pizza_slice = 1, flammable = 2},
 })
 
@@ -279,7 +279,7 @@ minetest.register_craft({
 minetest.register_craftitem("pizza:cheesepizza_slice", {
     description = S("Cheese Pizza Slice"),
 	inventory_image = "Cheesepizzaslice.png",
-	on_use = minetest.item_eat(7),
+	on_use = minetest.item_eat(4),
 	groups = {pizza_slice = 1, flammable = 2},
 })
 
