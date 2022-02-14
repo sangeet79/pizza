@@ -361,4 +361,4 @@ minetest.register_craft({
 		"pizza:cheesepizza_slice",
 		"pizza:cheesepizza_slice",
 	},
-}
+})
