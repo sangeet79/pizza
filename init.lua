@@ -116,7 +116,7 @@ minetest.register_craft({
     output = "pizza:margherita",
 	recipe = {
 	    {"group:food_flour","group:food_tomato",""},
-		{"pizza:marinara","",""},
+		{"pizza:marinara","pizza:mozarella",""},
 		{"","",""},
 	},
 	replacements = {
