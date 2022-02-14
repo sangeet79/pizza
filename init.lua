@@ -1,5 +1,3 @@
--- Thx to sangeet79 for revising and fixing the codes
-
 local modname = "pizza"
 local modpath = minetest.get_modpath(modname)
 local mg_name = minetest.get_mapgen_setting("mg_name")
@@ -105,11 +103,13 @@ minetest.register_node("pizza:margherita", {
 	selection_box = {
 		type = "wallmounted",
 	},
-	legacy_wallmounted = false,
-	use_texture_alpha = false,
+	paramtype = "light",
+	is_ground_content = false,
+	use_texture_alpha = "blend",
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
-	groups = {snappy = 3},
+	groups = {snappy = 3, food_pizza = 1},
+    on_use = minetest.item_eat(8),
 })
 
 minetest.register_craft({
@@ -136,11 +136,13 @@ minetest.register_node("pizza:pepperonipizza", {
 	selection_box = {
 		type = "wallmounted",
 	},
-	legacy_wallmounted = false,
-	use_texture_alpha = false,
+	paramtype = "light",
+	is_ground_content = false,
+	use_texture_alpha = "blend",
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
-	groups = {snappy = 3},
+	groups = {snappy = 3, food_pizza = 1},
+    on_use = minetest.item_eat(8),
 })
 
 minetest.register_craft({
@@ -167,11 +169,13 @@ minetest.register_node("pizza:hawaiian", {
 	selection_box = {
 		type = "wallmounted",
 	},
-	legacy_wallmounted = false,
-	use_texture_alpha = false,
+	paramtype = "light",
+	is_ground_content = false,
+	use_texture_alpha = "blend",
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
-	groups = {snappy = 3},
+	groups = {snappy = 3, food_pizza = 1},
+    on_use = minetest.item_eat(8),
 })
 
 minetest.register_craft({
@@ -192,17 +196,19 @@ minetest.register_node("pizza:cheese_pizza", {
 	inventory_image = "CheesePizza.png",
 	wield_image = "CheesePizza.png",
 	sunlight_propagates = true,
-	walkable = false,
+	walkable = true,
 	climbable = false,
 	is_ground_content = false,
 	selection_box = {
 		type = "wallmounted",
 	},
-	legacy_wallmounted = false,
-	use_texture_alpha = false,
+	paramtype = "light",
+	is_ground_content = false,
+	use_texture_alpha = "blend",
 	drawtype = "signlike",
 	paramtype2 = "wallmounted",
-	groups = {snappy = 3},
+	groups = {snappy = 3, food_pizza = 1},
+    on_use = minetest.item_eat(8),
 })
 
 minetest.register_craft({
@@ -222,8 +228,8 @@ minetest.register_craft({
 minetest.register_craftitem("pizza:margherita_slice", {
     description = S("Margharita Pizza Slice"),
 	inventory_image = "Marghariteslice.png",
-	on_use = minetest.item_eat(4),
-	groups = {pizza_slice = 1, flammable = 2},
+	on_use = minetest.item_eat(1),
+	groups = {food_pizza = 1, flammable = 2},
 })
 
 minetest.register_craft({
@@ -241,8 +247,8 @@ minetest.register_craft({
 minetest.register_craftitem("pizza:pepperoni_slice", {
     description = S("Pepperoni Pizza Slice"),
 	inventory_image = "Pepperonislice.png",
-	on_use = minetest.item_eat(4),
-	groups = {pizza_slice = 1, flammable = 2},
+	on_use = minetest.item_eat(1),
+	groups = {food_pizza = 1, flammable = 2},
 })
 
 minetest.register_craft({
@@ -260,8 +266,8 @@ minetest.register_craft({
 minetest.register_craftitem("pizza:hawaiian_slice", {
     description = S("Pineapple Pizza Slice"),
 	inventory_image = "Hawaiianslice.png",
-	on_use = minetest.item_eat(4),
-	groups = {pizza_slice = 1, flammable = 2},
+	on_use = minetest.item_eat(1),
+	groups = {food_pizza = 1, flammable = 2},
 })
 
 minetest.register_craft({
@@ -279,8 +285,8 @@ minetest.register_craft({
 minetest.register_craftitem("pizza:cheesepizza_slice", {
     description = S("Cheese Pizza Slice"),
 	inventory_image = "Cheesepizzaslice.png",
-	on_use = minetest.item_eat(4),
-	groups = {pizza_slice = 1, flammable = 2},
+	on_use = minetest.item_eat(1),
+	groups = {food_pizza = 1, flammable = 2},
 })
 
 minetest.register_craft({
@@ -295,7 +301,7 @@ minetest.register_craft({
 	},
 })
 
--- Packing pizza slides
+-- Packing pizza slices
 
 minetest.register_craft({
 	type = "shapeless",
@@ -355,4 +361,4 @@ minetest.register_craft({
 		"pizza:cheesepizza_slice",
 		"pizza:cheesepizza_slice",
 	},
-})
+}
