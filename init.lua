@@ -99,7 +99,6 @@ minetest.register_node("pizza:margherita", {
 	sunlight_propagates = true,
 	walkable = false,
 	climbable = false,
-	is_ground_content = false,
 	selection_box = {
 		type = "wallmounted",
 	},
@@ -132,7 +131,6 @@ minetest.register_node("pizza:pepperonipizza", {
 	sunlight_propagates = true,
 	walkable = false,
 	climbable = false,
-	is_ground_content = false,
 	selection_box = {
 		type = "wallmounted",
 	},
@@ -165,7 +163,6 @@ minetest.register_node("pizza:hawaiian", {
 	sunlight_propagates = true,
 	walkable = false,
 	climbable = false,
-	is_ground_content = false,
 	selection_box = {
 		type = "wallmounted",
 	},
@@ -198,7 +195,6 @@ minetest.register_node("pizza:cheese_pizza", {
 	sunlight_propagates = true,
 	walkable = true,
 	climbable = false,
-	is_ground_content = false,
 	selection_box = {
 		type = "wallmounted",
 	},
